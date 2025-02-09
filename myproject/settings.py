@@ -29,7 +29,17 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'connect-production-0fe6.up.railway.app',  # Production domain
+    'localhost',  # Local development
+    '127.0.0.1'   # Local development IP
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://connect-production-0fe6.up.railway.app/",
+]
+
 
 
 # Application definition
